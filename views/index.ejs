@@ -1,0 +1,15 @@
+<!-- views/index.ejs  -->
+<div>
+  <!-- if you want to output  <\%= something %> -->
+  <!-- otherwiswe  <\% something.forEach %> -->
+  <h1>You SearchedFor: <%= data.userQuery %></h1>
+  <% if(data.loggedIn) { %>
+  <h2>You are login as : <%= data.userName %></h2>
+  <% } %>
+
+  <ul>
+    <% data.searchResults.forEach(result => { %>
+    <li><%= result %></li>
+    <% }); %>
+  </ul>
+</div>
